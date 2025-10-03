@@ -3,94 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adify Project</title>
+  <title>dzvellox - Portfolio</title>
   <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
-      color: #e0e0e0;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+      line-height: 1.6;
     }
 
-    .card {
-      max-width: 700px;
-      width: 90%;
-      background: rgba(20, 20, 30, 0.9);
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 0 30px rgba(0, 200, 255, 0.2);
+    header {
       text-align: center;
-      backdrop-filter: blur(6px);
+      padding: 3rem 1rem;
+      background: rgba(0, 0, 0, 0.4);
     }
 
-    h1 {
-      font-size: 2.8rem;
+    header h1 {
+      font-size: 3rem;
+      color: #00eaff;
+      text-shadow: 0 0 15px rgba(0, 234, 255, 0.7);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 0.8rem;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
       margin-bottom: 1rem;
-      color: #00eaff;
-      text-shadow: 0 0 12px rgba(0, 234, 255, 0.7);
-    }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      margin: 15px 0;
-    }
-
-    strong {
       color: #ffd700;
+      text-shadow: 0 0 10px rgba(255,215,0,0.5);
+      border-bottom: 2px solid rgba(255,255,255,0.2);
+      display: inline-block;
+      padding-bottom: 0.3rem;
     }
 
-    a {
+    .stack, .contact, .projects {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .stack p {
+      font-size: 1.2rem;
+    }
+
+    .project {
+      background: rgba(255,255,255,0.05);
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0, 234, 255, 0.5);
+    }
+
+    .project h3 {
+      margin-bottom: 0.5rem;
       color: #00eaff;
+    }
+
+    .contact a {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      color: #fff;
+      background: linear-gradient(135deg, #00eaff, #0072ff);
       transition: 0.3s;
     }
 
-    a:hover {
-      color: #ffd700;
-      text-shadow: 0 0 8px #ffd700;
+    .contact a:hover {
+      background: linear-gradient(135deg, #ffd700, #ff8000);
+      transform: scale(1.05);
+      box-shadow: 0 0 12px rgba(255,215,0,0.8);
     }
 
     footer {
-      margin-top: 2rem;
-      font-size: 0.95rem;
-      opacity: 0.8;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #00eaff, #0072ff);
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: linear-gradient(135deg, #ffd700, #ff8000);
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Adify Project</h1>
-    <p>Welcome to the official page of <strong>Adify</strong>, a personal software development project.</p>
-    <p>This project is primarily focused on <strong>backend development</strong>, especially <strong>databases</strong> and API connections for mobile applications.</p>
-    <p>This link (<strong>adify.is-a.dev</strong>) will be used mainly as a technical entry point for backend services.</p>
-    <p>Stay tuned for upcoming updates and new features!</p>
-    <a href="https://github.com/dzvellox" class="btn" target="_blank">View on GitHub</a>
-    <footer>Created by <a href="https://github.com/dzvellox" target="_blank">dzvellox</a></footer>
-  </div>
+  <header>
+    <h1>dzvellox</h1>
+    <p>High school student & young developer, passionate about building apps and projects.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Tech Stack</h2>
+      <div class="stack">
+        <p><strong>Languages:</strong> Python, Flutter, SQL</p>
+        <p><strong>Database:</strong> PostgreSQL</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Adify</h3>
+          <p>A mobile application in development that will donate its revenue to charities.</p>
+        </div>
+        <div class="project">
+          <h3>Discord Bot</h3>
+          <p>A versatile Discord bot with tickets, announcements, suggestions, file sharing, and dynamic status.</p>
+        </div>
+        <div class="project">
+          <h3>Chrome Extension</h3>
+          <p>An extension that simulates automated web searches (for example, auto-searching on Bing).</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <div class="contact">
+        <a href="https://github.com/dzvellox" target="_blank">GitHub</a>
+        <a href="mailto:dzvellox@gmail.com">Email</a>
+        <a href="#">Discord: iron5433</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 - dzvellox | Personal portfolio
+  </footer>
 </body>
 </html>
